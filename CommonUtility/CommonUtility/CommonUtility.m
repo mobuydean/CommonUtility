@@ -511,6 +511,20 @@
 }
 
 
+#pragma mark - --- 获取0-1之间随机数
++ (CGFloat)getFloatRandom {
+    return (float)(1+arc4random()% 99)/100;
+}
+
+#pragma mark - ---  从0到(max-1)之间的随机整数
++ (NSInteger)getIntegerRandomWithInMax:(NSInteger)max {
+    NSInteger random = 0;
+    while (random == 0) {
+        random = (arc4random() % (max+1));
+    }
+    random = random - 1;
+    return random;
+}
 
 
 

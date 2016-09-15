@@ -30,6 +30,14 @@
     [self testColorForImage];
     
     
+    CGFloat r = [CommonUtility getFloatRandom];
+    NSLog(@"r = %f",r);
+    
+    CGFloat r_m = [CommonUtility getIntegerRandomWithInMax:10];
+    NSLog(@"r_m = %.f",r_m);
+    
+    
+    /*
     NSMutableDictionary *dic = [CommonUtility urlParser:@"CommonTest://show?arr=1&kv=2" appScheme:@"CommonTest://"];
     
     NSLog(@"dic = %@",dic);
@@ -38,7 +46,7 @@
     NSArray *array = @[@"hhh",@"jjj",@"mmmm",@"yyyytt",@"poeoeo"];
     
     [array componentsJoinedByString:@"-"];
-    
+   */
     
 
     /*
