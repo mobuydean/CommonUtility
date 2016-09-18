@@ -151,8 +151,14 @@ typedef NS_ENUM(NSInteger, MobileOperatorType) {
  */
 +(NSMutableDictionary*)urlParser:(NSString*)urlString appScheme:(NSString*)appScheme;
 
-
-
+/**
+ *  获取0-1之间随机数
+ */
++ (CGFloat)getFloatRandom;
+/**
+ *  从0到(max-1)之间的随机整数
+ */
++ (NSInteger)getIntegerRandomWithInMax:(NSInteger)max;
 
 
 @end
