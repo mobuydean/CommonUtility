@@ -158,7 +158,7 @@
 #pragma mark - --- 清除缓存文件
 +(void)clearCache
 {
-    NSString *filePath = [self cachePath];
+    NSString *filePath = [CommonUtility cachePath];
     NSFileManager * manager = [NSFileManager defaultManager];
     if ([manager fileExistsAtPath:filePath]) {
         if ([manager fileExistsAtPath:filePath]){
@@ -179,7 +179,7 @@
 #pragma mark - --- 计算缓存的大小
 +(float)calculateCache
 {
-    NSString *filePath = [self cachePath];
+    NSString *filePath = [CommonUtility cachePath];
     NSFileManager * manager = [NSFileManager defaultManager];
     float cache = 0;
     if ([manager fileExistsAtPath:filePath]) {
@@ -192,7 +192,7 @@
             
             while ((fileName = [childFilesEnumerator nextObject]) != nil){
                 NSString* fileAbsolutePath = [filePath stringByAppendingPathComponent:fileName];
-                folderSize += [self fileSizeAtPath:fileAbsolutePath];
+                folderSize += [CommonUtility fileSizeAtPath:fileAbsolutePath];
             }
             
             cache = folderSize / 1024 / 1024.0;
