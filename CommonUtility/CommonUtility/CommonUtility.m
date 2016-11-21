@@ -526,7 +526,22 @@
     return random;
 }
 
-
+#pragma mark - ---  返回渐变色
++ (CAGradientLayer *)getGradientColorWithColors:(NSArray *)colors locations:(NSArray *)locations startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint frame:(CGRect)frame
+{
+//    colors = @[(__bridge id)COLOR_CONTROLLER_ORINGE.CGColor, (__bridge id)[CommonUtility colorWithHexString:@"#ff9561"].CGColor];
+//    locations = @[@0.5, @1.0];
+//    CGPointMake(0, 1.0);
+//    frame = CGRectMake(0, 0, SCREEN_WIDTH, NAV_HEIGHT);
+    startPoint = CGPointMake(0, 0.5);
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+    gradientLayer.colors = colors;
+    gradientLayer.locations = locations;
+    gradientLayer.startPoint = startPoint;
+    gradientLayer.endPoint = endPoint;
+    gradientLayer.frame = frame;
+    return gradientLayer;
+}
 
 
 

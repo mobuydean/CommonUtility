@@ -160,5 +160,9 @@ typedef NS_ENUM(NSInteger, MobileOperatorType) {
  */
 + (NSInteger)getIntegerRandomWithInMax:(NSInteger)max;
 
+/**
+ *  返回渐变色
+ */
++(CAGradientLayer *)getGradientColorWithColors:(NSArray *)colors locations:(NSArray *)locations startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint frame:(CGRect)frame;
 
 @end
